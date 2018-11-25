@@ -299,14 +299,12 @@
 <p class="p indent">举例来说：假设“月光宝盒”是个API object。
 </p>
 <ul class="ul list-star compact">
-<li class="li ul-li list-star-li compact-li">调用一次：月光宝盒.波罗波罗蜜（至尊宝） = 回到五百年前，遇到紫霞仙子 
+<li class="li ul-li list-star-li compact-li">调用一次：月光宝盒.波罗波罗蜜（至尊宝） = 回到五百年前，遇到紫霞仙子；到了黑风岭，把唐僧送给牛魔王；自己被十三娘所杀
 </li>
-<li class="li ul-li list-star-li compact-li">再调用一次：月光宝盒.波罗波罗蜜（至尊宝）= 到了黑风岭，把唐僧送给牛魔王；自己被十三娘所杀
-</li>
-<li class="li ul-li list-star-li compact-li">又调用一次：月光宝盒.波罗波罗蜜（至尊宝（转世后））= 回到五百年后，带着唐僧去取经
+<li class="li ul-li list-star-li compact-li">再调用一次：月光宝盒.波罗波罗蜜（至尊宝（转世后））= 回到五百年后，带着唐僧去取经
 </li></ul>
 
-<p class="p noindent">为什么每次调用同一个函数，得到的结果不一样呢？就是这样的复杂性，使得代码无法被简单的组合起来，和重复使用。
+<p class="p noindent">为什么两次调用同一个函数，得到的结果不一样呢？就是这样的复杂性，使得代码无法被简单的组合起来，和重复使用。
 </p>
 <p class="p indent">你也许会说，我们刚才忽略了“波罗波罗蜜”的一个隐形参数：时光穿梭的年份。例如：月光宝盒.波罗波罗蜜（至尊宝，&#8722;500）表示回到五百年前。
 </p>
@@ -326,44 +324,34 @@
 <li class="li ul-li list-star-li compact-li">（至尊宝B，月光宝盒B，世界B) = 波罗波罗蜜(至尊宝A，月光宝盒A，世界A)
 </li>
 <li class="li ul-li list-star-li compact-li">（至尊宝C，月光宝盒C，世界C) = 波罗波罗蜜(至尊宝B，月光宝盒B，世界B)
-</li>
-<li class="li ul-li list-star-li compact-li">（至尊宝D，月光宝盒D，世界D) = 波罗波罗蜜(至尊宝C，月光宝盒C，世界C)
 </li></ul>
 
 <p class="p noindent">每次调用“波罗波罗蜜”，都返回一个“新”的至尊宝、月光宝盒、和世界。
 </p>
-<p class="p indent">至尊宝A是山贼，至尊宝D是齐天大圣。有了这些表达式，我们还能分清
+<p class="p indent">至尊宝A是山贼，至尊宝C是齐天大圣。有了这些表达式，我们还能分清
 </p>
 <ul class="ul list-star compact">
-<li class="li ul-li list-star-li compact-li">至尊宝B = 求紫霞仙子要月光宝盒
-</li>
-<li class="li ul-li list-star-li compact-li">至尊宝C = 要和白晶晶成亲，却念念不忘紫霞
+<li class="li ul-li list-star-li compact-li">至尊宝B = 求紫霞仙子要月光宝盒，然后要和白晶晶成亲，却念念不忘紫霞
 </li></ul>
 
-<p class="p noindent">在世界A里有二当家的、白晶晶，十三娘。世界B里有紫霞仙子。世界C里有唐僧、八戒、黑山老妖，牛魔王。世界D里有唐僧，二当家，白晶晶，十三娘，菩提老祖。世界A里的二当家，或者白晶晶和世界D里的二当家，或者白晶晶完全没有关系。
+<p class="p noindent">在世界A里有二当家的、白晶晶，十三娘。世界B里有紫霞仙子、唐僧、八戒、黑山老妖，牛魔王。世界C里有唐僧，二当家，白晶晶，十三娘，菩提老祖。世界A里的二当家，或者白晶晶和世界C里的二当家，或者白晶晶完全没有关系。
 </p>
 <p class="p indent">&#8220;波罗波罗蜜&#8221;这样的调用方法看起来繁冗，但是它保证每次调用，只要输入的参数一样，得出的结果一定是一样的。所有被side-effects影响的全都列出来，作为返回变量。这样functional语言的表达式，就和数学表达式一样了。很多强大的数学推理的方法也可以被应用到编程当中来。
 </p>
-<p class="p indent">如果你仔细的读到现在，应该发现前面的代码有bug。世界B里的紫霞知道至尊宝要月光宝盒去救白晶晶，世界C里的紫霞也知道此事，她要帮助尊宝从牛魔王那里夺回月光宝盒。也就是说，其中的两个紫霞是有关联的。所以，紫霞也应该出现在输入，输出的变量列表里：
+<p class="p indent">此外, “转世轮回”也是故事中被广泛使用的函数，比如：
 </p>
 <ul class="ul list-star compact">
-<li class="li ul-li list-star-li compact-li">（&#8230;, 紫霞n, &#8230;) = 波罗波罗蜜（&#8230;, 紫霞m, &#8230;）
-</li></ul>
-
-<p class="p noindent">此外, “转世轮回”也是故事中被广泛使用的函数，比如：
-</p>
-<ul class="ul list-star compact">
-<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝C） = 齐天大圣
+<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝B） = 齐天大圣
 </li>
-<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝D&#39;) = 至尊宝A
+<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝C&#39;) = 至尊宝A
 </li></ul>
 
-<p class="p noindent">至尊宝D&#39;是被观音收走的前齐天大圣，和后来陪唐僧去取经的至尊宝D，判若两人。
+<p class="p noindent">至尊宝C&#39;是被观音大师收走的前齐天大圣，和后来陪唐僧去取经的至尊宝C，判若两人。
 </p>
 <p class="p indent">其实大话西游的故事用一句代码来表述：
 </p>
 <ul class="ul list-star compact">
-<li class="li ul-li list-star-li compact-li">(波罗波罗蜜)<sup>3</sup> 。转世轮回（至尊宝D&#39;) = 至尊宝D
+<li class="li ul-li list-star-li compact-li">(波罗波罗蜜)<sup>2</sup> &#8901; 转世轮回（至尊宝C&#39;) = 至尊宝C
 </li></ul>
 
 <p class="p noindent">解析完毕，收工#
