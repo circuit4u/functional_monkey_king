@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.1.6" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    text-align: left;
+    white-space: pre;
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0"><h2 id="sec-functional" class="h1" data-heading-depth="1" style="display:block"><span class="heading-before"><span class="heading-label">1</span>.&#8194;</span>大话functional编程语言</h2>
+<p class="p noindent">今天计算机已经被广泛应用于处理繁杂的商业事务和海量的用户数据。人们也许遗忘了，它最初是被用来帮助进行数值计算，简单说，用来求解数学问题的。
+</p>
+<p class="p indent">所以说functional编程语言，把计算机编程和数学紧密联系起来，回归到了计算机的本意。
+</p>
+<p class="p indent">有趣的是，数值计算并不是functional语言的强项。functional编程的主旨是通过数学的逻辑和代数的演算，帮助程序员解析复杂的编程问题。所谓解析，就是把复杂的问题拆解成简单的问题，一一解决，然后再组合拼装起来。
+</p>
+<p class="p indent">一般常用的编程语言(imperative）往往通过函数调用或者object-oriented方法把复杂问题进行拆分，但是组装起来就不是很容易了。
+</p>
+<p class="p indent">举例来说：假设“月光宝盒”是个API object。
+</p>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">调用一次：月光宝盒.波罗波罗蜜（至尊宝） = 回到五百年前，遇到紫霞仙子 
+</li>
+<li class="li ul-li list-star-li compact-li">再调用一次：月光宝盒.波罗波罗蜜（至尊宝）= 到了黑风岭，把唐僧送给牛魔王；自己被十三娘所杀
+</li>
+<li class="li ul-li list-star-li compact-li">又调用一次：月光宝盒.波罗波罗蜜（至尊宝（转世后））= 回到五百年后，带着唐僧去取经
+</li></ul>
+
+<p class="p noindent">为什么每次调用同一个函数，得到的结果不一样呢？就是这样的复杂性，使得代码无法被简单的组合起来，和重复使用。
+</p>
+<p class="p indent">你也许会说，我们刚才忽略了“波罗波罗蜜”的一个隐形参数：时光穿梭的年份。例如：月光宝盒.波罗波罗蜜（至尊宝，-500）表示回到五百年前。
+</p>
+<p class="p indent">那么按照数学表达式的基本演算规则：月光宝盒.波罗波罗蜜（月光宝盒.波罗波罗蜜（至尊宝，-500），+500） == 现在的至尊宝 
+</p>
+<p class="p indent">也就是说，先回到五百年前，再从五百年前回来，应该等于没有发生过时光穿梭。因为：-500 + 500 = 0 （回到现在）
+</p>
+<p class="p indent">可是电影里的山贼至尊宝时光穿梭来回之后，变成了齐天大圣孙悟空。难道这是上天（不，导演）的安排？
+</p>
+<p class="p indent">问题出在“月光宝盒.波罗波罗蜜（至尊宝）”的调用过程中产生了side-effects，用通俗的话说，就是历史被改变了。
+</p>
+<p class="p indent">现在我们再来看看，functional编程语言能否帮我们把这个故事解析清楚呢？
+</p>
+<p class="p indent">其实也很简单，在functional语言中，我们换个角度，把“波罗波罗蜜”作为一个主线的函数：
+</p>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">（至尊宝B，月光宝盒B，世界B) = 波罗波罗蜜(至尊宝A，月光宝盒A，世界A)
+</li>
+<li class="li ul-li list-star-li compact-li">（至尊宝C，月光宝盒C，世界C) = 波罗波罗蜜(至尊宝B，月光宝盒B，世界B)
+</li>
+<li class="li ul-li list-star-li compact-li">（至尊宝D，月光宝盒D，世界D) = 波罗波罗蜜(至尊宝C，月光宝盒C，世界C)
+</li></ul>
+
+<p class="p noindent">每次调用“波罗波罗蜜”，都返回一个“新”的至尊宝、月光宝盒、和世界。
+</p>
+<p class="p indent">至尊宝A是山贼，至尊宝D是齐天大圣。有了这些表达式，我们还能分清
+</p>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">至尊宝B = 求紫霞仙子要月光宝盒
+</li>
+<li class="li ul-li list-star-li compact-li">至尊宝C = 要和白晶晶成亲，却念念不忘紫霞
+</li></ul>
+
+<p class="p noindent">在世界A里有二当家的、白晶晶，十三娘。世界B里有紫霞仙子。世界C里有唐僧、八戒、黑山老妖，牛魔王。世界D里有唐僧，二当家，白晶晶，十三娘，菩提老祖。世界A里的二当家，或者白晶晶和世界D里的二当家，或者白晶晶完全没有关系。
+</p>
+<p class="p indent">&#8220;波罗波罗蜜&#8221;这样的调用方法看起来繁冗，但是它保证每次调用，只要输入的参数一样，得出的结果一定是一样的。所有被side-effects影响的全都列出来，作为返回变量。这样functional语言的表达式，就和数学表达式一样了。很多强大的数学推理的方法也可以被应用到编程当中来。
+</p>
+<p class="p indent">如果你仔细的读到现在，应该发现前面的代码有bug。世界B里的紫霞知道至尊宝要月光宝盒去救白晶晶，世界C里的紫霞也知道此事，她要帮助尊宝从牛魔王那里夺回月光宝盒。也就是说，其中的两个紫霞是有关联的。所以，紫霞也应该出现在输入，输出的变量列表里：
+</p>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">（&#8230;, 紫霞n, &#8230;) = 波罗波罗蜜（&#8230;, 紫霞m, &#8230;）
+</li></ul>
+
+<p class="p noindent">此外, “转世轮回”也是故事中被广泛使用的函数，比如：
+</p>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝C） = 齐天大圣
+</li>
+<li class="li ul-li list-star-li compact-li">转世轮回（至尊宝D&#39;) = 至尊宝A
+</li></ul>
+
+<p class="p noindent">至尊宝D&#39;是被观音收走的前齐天大圣，和后来陪唐僧去取经的至尊宝D，判若两人。
+</p>
+<p class="p indent">解析完毕，收工#
+</p><span data-line=""></span></div>
+</body>
+
+</html>
